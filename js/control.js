@@ -12,7 +12,6 @@ export const changeActiveBtn = (dataUse) => {
         }else{
             navigationBtns[i].classList.remove('navigation__btn_active');
         }
-       
 
     }
 
@@ -47,5 +46,12 @@ export const initControl = () => {
 
     btnStop.addEventListener('click', stop);
 
+    for(let i=0;i<navigationBtns.length;i++){
+        navigationBtns[i].addEventListener('click', () => {
+            state.status = navigationBtns[i].dataset.use;
+            changeActiveBtn(navigationBtns[i].dataset.use);
+            stop();
+        });
+    }
 };
 
