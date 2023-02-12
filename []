@@ -1,0 +1,29 @@
+[33mcommit a745a295087329650be827079da0be7f0b4ddf90[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Abay Darmenov <abay.darmenov@gmail.com>
+Date:   Thu Feb 2 23:55:00 2023 +0600
+
+    Implement functionality of the state tabs so that it gets highlighted and restarts the timer
+
+[33mcommit 90c76f4708e393546152146f366c55666537a576[m
+Author: Abay Darmenov <abay.darmenov@gmail.com>
+Date:   Thu Feb 2 22:32:18 2023 +0600
+
+    Switching between the three modes
+    
+    Implement switching from one state of pomodoro to another once the timer
+    end
+
+[33mcommit 68eed259c0d08425321ba807917e5c522d2d5d15[m
+Author: Abay Darmenov <abay.darmenov@gmail.com>
+Date:   Thu Feb 2 20:56:32 2023 +0600
+
+    changed interface to English
+
+[33mcommit 7960a2fe085eea0472e4f865a26da99a6c4a8b56[m
+Author: Abay Darmenov <abay.darmenov@gmail.com>
+Date:   Thu Feb 2 18:26:14 2023 +0600
+
+    Create the project
+    Make the start button work
+    Add music at the end of the timer
+    Insert zeroes for one-digit   numbers in the timer for seconds and minutes
