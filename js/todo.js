@@ -14,10 +14,7 @@ li.append(todoAddBtn);
 const getTodo = () => {
     const todoList = JSON.parse(localStorage.getItem('pomodoro') || '[]');
 
- 
-
     return todoList;
-
 }
 
 const createTodoListItem = todo => {
@@ -46,13 +43,29 @@ const createTodoListItem = todo => {
         todoListElem.prepend(todoItem);
 
         todoBtn.addEventListener('click', () => {
-            
+            const todoList = getTodo();
+            let index = Array.from(todoList).map(el => el.id).indexOf(todo.id);
+            state.activeTodo = todoList[index];
+
+            showTodo();
         })
         editBtn.addEventListener('click', () => {
-
+            const title = prompt('Edit the task name');
+            todoBtn.textContent = title;
+            const todoList = getTodo();
+            let index = Array.from(todoList).map(el => el.id).indexOf(todo.id);
+            todoList[index].title = title;
+            localStorage.setItem('pomodoro', JSON.stringify(todoList));
+            showTodo();
         })
         delBtn.addEventListener('click', () => {
-
+            todoListElem.removeChild(todoItem);
+            
+            const todoList = getTodo();
+            let index = Array.from(todoList).map(el => el.id).indexOf(todo.id);
+            todoList.splice(index, 1);
+            localStorage.setItem('pomodoro', JSON.stringify(todoList));
+            showTodo();
         })
         
     }
@@ -83,6 +96,8 @@ const renderTodoList = (list) => {
 const showTodo = () => {
     titleElem.textContent = state.activeTodo.title;
     // show how many pomodoros done
+    const count = document.querySelector('.count_num');
+    count.textContent = state.activeTodo.pomodoro;
 }
 
 export const initTodo = () => {
