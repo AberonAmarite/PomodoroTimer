@@ -4,7 +4,7 @@ import { initTodo } from "./todo.js";
 
 
 const initPomodoro = () => {
-    // initControl();
+    initControl();
     initTodo();
     
 };
