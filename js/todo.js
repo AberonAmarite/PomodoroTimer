@@ -57,15 +57,12 @@ const createTodoListItem = todo => {
                     state.activeTodo.title = todo.title;
                     state.activeTodo.pomodoro = todo.pomodoro;
                 }
-                
                 showTodo();
-                
             }
 
         })
         delBtn.addEventListener('click', () => {
             todoListElem.removeChild(todoItem);
-            
             removeTodo(todo);
             showTodo();
         })
@@ -100,7 +97,6 @@ const removeTodo = (todo) => {
         }
     } else
         state.activeTodo = todoList[todoList.length - 1];
-
 
     showTodo();
 }

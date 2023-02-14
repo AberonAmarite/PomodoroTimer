@@ -1,6 +1,6 @@
-const WORK_TIME = 2;
-const BREAK_TIME = 1;
-const RELAX_TIME = 3;
+const WORK_TIME = 25;
+const BREAK_TIME = 5;
+const RELAX_TIME = 30;
 
 export const state = {
     work: WORK_TIME,

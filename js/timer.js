@@ -21,11 +21,6 @@ export const startTimer = () => {
 
         showTime(state.timeLeft);
 
-        if (!(state.timeLeft % 5)) {
-            const now = new Date().getTime();
-            state.timeLeft = Math.floor((countdown - now) / 1000); 
-        }
-
         if (state.timeLeft > 0 && state.isActive) return;
 
         clearTimeout(state.timerId);
